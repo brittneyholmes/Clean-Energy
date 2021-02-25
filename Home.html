@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clean Energy- Home</title>
+<link href="css/mystyle.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<header> 
+  
+<nav>
+	<img src="images/LOGO.jpg" width="397" height="116" alt="logo" class="logo"/>
+      <ul>
+        <li><a href="Careers.html">CAREERS</a></li>
+		<li><a href="About.html">ABOUT</a></li>
+        <li><a href="Blog.html">BLOG</a></li>
+		  <li><a href="Home.html">HOME</a></li>
+    </ul>
+    </nav>
+  </header>
+ 
+<script>
+	var i = 0; 			// Start Point
+	var images = [];	// Images Array
+	var time = 3000;	// Time Between Switch
+	 
+	// Image List
+	images[0] = "images/Image-one.jpg";
+	images[1] = "images/Image-two.jpg";
+	images[2] = "images/Image-three.jpg";
+
+
+	// Change Image
+	function changeImg(){
+		document.getElementsByName('slide')[0].src = images[i];
+		
+		// Check If Index Is Under Max
+		if(i < images.length - 1){
+		  // Add 1 to Index
+		  i++; 
+		} else { 
+			// Reset Back To O
+			i = 0;
+		}
+
+		// Run function every x seconds
+		setTimeout("changeImg()", time);
+	}
+
+	// Run function when page loads
+	window.onload=changeImg;
+	</script><img name="slide" width="400" height="250" class="slide" alt="Slide">
+	<!-- About Section -->
+  <section class="about" id="about">
+    <h2 class="hidden">Building a Clean Economy</h2>
+    <p class="text_column">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+    <p class="text_column">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+    <p class="text_column">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+    <p class="text_column">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+  </section>
+  <!-- Stats Gallery Section -->
+<div class="gallery">
+  <div class="thumbnail">
+    <h1 class="stats">7500</h1>
+    <h4>Clients</h4>
+    
+  </div>
+    <div class="thumbnail">
+      <h1 class="stats">50</h1>
+      <h4>Countries</h4>
+      
+  </div>
+  <div class="thumbnail">
+    <h1 class="stats">1500    </h1>
+    <h4>Employees </h4>
+  </div>
+    <div class="thumbnail">
+      <h1 class="stats">3</h1>
+      <h4>Energy Sources  </h4>
+  </div>
+</div>
+<section class="banner">
+  <object id="EdgeID" type="text/html" width="570" height="420" data-dw-widget="Edge" data="images/CleanEnergyAnimationAd.html">
+  </object>
+</section>
+	
+</body>
+</html>
